@@ -218,4 +218,5 @@ zstandard==0.23.0
 fastapi[all]
 streamlit
 langchain-community
+langchain_core
 -e .
