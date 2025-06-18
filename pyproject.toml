@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doctor-appointment-agentic"
+version = "0.0.1"
+requires-python = ">=3.10"
+license = { text = "MIT" }          # ← static license declaration :contentReference[oaicite:1]{index=1}
+authors = [ { name = "Pavan Manikanta" } ]
+dependencies = [
+  "fastapi>=0.115.8",
+  "streamlit>=1.25.0",
+  # …other deps…
+]
