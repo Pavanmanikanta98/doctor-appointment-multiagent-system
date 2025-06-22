@@ -1,20 +1,29 @@
 def clean_messages(messages):
-    """Remove duplicate messages and ensure proper formatting"""
+    """Smartly reduce messages while keeping identity, latest context, and decision cues."""
     if not messages:
         return []
-    
-    cleaned = []
-    seen_contents = set()
-    
-    for msg in messages:
-        # Create a unique identifier based on content and type
-        content_key = f"{msg.content[:100]}_{type(msg).__name__}"
-        
-        if content_key not in seen_contents:
-            seen_contents.add(content_key)
-            cleaned.append(msg)
-    
-    return cleaned
+
+    kept = []
+    seen_keys = set()
+
+    for msg in reversed(messages):  # Reverse to keep latest relevant
+        key = f"{msg.content[:100]}_{type(msg).__name__}"
+
+        # Always keep:
+        if (
+            "identification number is" in msg.content.lower()
+            or "id_number" in getattr(msg, "content", "").lower()
+            or "reasoning" in msg.content.lower()
+            or "routing to" in msg.content.lower()
+        ):
+            kept.append(msg)
+            continue
+
+        if key not in seen_keys:
+            seen_keys.add(key)
+            kept.append(msg)
+
+    return list(reversed(kept))  # Restore original order
 
 
 

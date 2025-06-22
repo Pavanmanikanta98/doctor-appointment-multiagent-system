@@ -1,3 +1,6 @@
 venv
 .env
 doctor_appointment_agentic.egg-info
+
+temp.txt
+text.txt
