@@ -2,9 +2,6 @@
 
 A modular AI scheduling assistant built using **LangGraph**, **LangChain**, and the **Groq API**. This system coordinates autonomous agents to manage doctor appointments with *human-in-the-loop fallback*, combining flexibility, real-time inference, and a robust, modular design.
 
-![Doctor Appointment Multi-Agent System Demo](https://storage.googleapis.com/gemini-prod/images/e6f15777-b9c1-4b17-a006-2580a82e9efd.jpeg)
-*A demonstration of the multi-agent orchestration interface.*
-
 ---
 
 ## ✨ About The Project
@@ -53,50 +50,6 @@ The system uses a **4-agent LangGraph workflow**. Each agent is a specialist, an
 -   📈 **Modular & Extensible Structure** designed to easily accommodate new agents or tasks.
 
 ---
-
-## 🚀 Getting Started
-
-Follow these steps to get a local copy up and running.
-
-### Prerequisites
-
-You will need the following installed:
-* Python 3.10+
-* Git
-
-### 1. Clone the Repository
-
-```bash
-git clone [https://github.com/yourusername/doctor-multiagent-system.git](https://github.com/yourusername/doctor-multiagent-system.git)
-cd doctor-multiagent-system
-```
-### 2. Install Dependencies
-
-Create a .env file in the project's root directory and add your Groq API key:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set Environment Variables
-
-````TOML
-GROQ_API_KEY=your_groq_api_key_here
-````
-
-### 4. Run the Application
-
-First, start the FastAPI backend server:
-```bash
-uvicorn backend.main:app --reload --port 8000
-```
-
-In a new terminal, run the Streamlit frontend:
-
-```bash
-streamlit run ./streamlit_ui.py
-```
-Open your browser and navigate to http://localhost:8501 to interact with the system.
 
 ### 🔮 Roadmap
 [x] Multi-agent orchestration using LangGraph
