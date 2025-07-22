@@ -45,7 +45,7 @@ The system uses a **4-agent LangGraph workflow**. Each agent is a specialist, an
 -   🔁 **Tool-Based Multi-Agent Orchestration** using LangGraph for stateful routing.
 -   🧠 **Context-Aware Workflows** with LangChain for memory and tool handling.
 -   ⚡ **Low-Latency Inference** powered by the Groq API for real-time conversation.
--   ✅ **95% Workflow Automation** with seamless human-in-the-loop fallback support.
+-   ✅ **90% Workflow Automation** with seamless human-in-the-loop fallback support.
 -   🎛️ **Interactive Streamlit Interface** for live demonstration and simulation.
 -   📈 **Modular & Extensible Structure** designed to easily accommodate new agents or tasks.
 
@@ -65,13 +65,4 @@ The system uses a **4-agent LangGraph workflow**. Each agent is a specialist, an
 [ ] Implement an async task queue (e.g., Celery or Redis) for scalability
 
 [ ] Add session-based user persistence for multi-turn conversations
-
-### 👨‍💻 Author
-Vasamsetti Pavan Manikanta
-- Email: pavanmanikanta45@gmail.com
-- Portfolio: https://portfolio98-pi.vercel.app/
-
-### 📄 License
-This project is licensed under the MIT License. Feel free to fork, use, and build upon it! See the LICENSE file for details.
-
 
